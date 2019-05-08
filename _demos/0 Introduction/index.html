@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React 101 (ES6 classes)! - Modern JS</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="fetch@1.1.0" data-semver="1.1.0" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/1.1.0/fetch.min.js"></script>
+    <script data-require="browser.js@*" data-semver="0.0.1" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
+    <script data-require="react@15.4.1" data-semver="15.4.1" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react.min.js"></script>
+    <script data-require="react@15.4.1" data-semver="15.4.1" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react-dom.min.js"></script>
+  <body>
+    <div id="banner-container"></div>
+    <script type="text/babel">
+   class Banner extends React.Component { 
+      render() { 
+           return (<div className={this.props.show ? '' : 'hidden'}>{this.props.message}</div>);
+        }
+   }
+
+   class BannerContainer extends React.Component { 
+        constructor(props)  {
+	    super(props);
+	    this.handleClick = this.handleClick.bind(this);
+	    this.handleAjaxButtonClick = this.handleAjaxButtonClick.bind(this);
+	    this.state = {showBanner: true, message: props.message};
+        }
+        handleClick(event) {
+            this.setState({showBanner: !this.state.showBanner, message: this.state.message});
+        }
+        handleAjaxButtonClick(event) { 
+            // Use fetch lib for AJAX, as React doesn't include AJAX support
+	          fetch('https://jsonplaceholder.herokuapp.com/posts/1')
+	          .then(function(response) {
+         	      return response.json()
+	          }).then(function(json) {
+	              console.log(json);
+                this.setState({'message': json.title});
+	          }.bind(this));
+        }
+        render() {
+           return (
+             <div>
+               <h4><button onClick={this.handleClick}>Click to {this.state.showBanner ? 'hide' : 'show'} {this.state.message}</button></h4>
+               <Banner show={this.state.showBanner} message={this.state.message}/>
+               <h4><button onClick={this.handleAjaxButtonClick}>Click to update message via AJAX</button></h4>
+             </div>
+           );
+        }
+   }
+
+ReactDOM.render(
+       <BannerContainer message="React 101 (ES6 classes)!"/>,
+       document.getElementById('banner-container')
+    );
+      
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+The ``mysum`` module
+======================
+
+Using ``mysum``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``sum`` from the ``mysum`` module:
+
+    >>> from mysum import sum
+
+Now use it:
+
+    >>> sum(6,10)
+    16

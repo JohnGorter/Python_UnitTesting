@@ -1,0 +1,32 @@
+{
+  "name": "python_unittest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "help": "node printhelp.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "lite-server -c bs-config.json",
+    "presentation": "lite-server -c bs-config.json",
+    "generatelabs": "pdfgenerator ./_labs",
+    "updateslides": "node updateslides.js",
+    "push": "node push.js",
+    "all": "npm run generatelabs && npm run push && npm run updateslides && npm run presentation"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@gitlab.rhea.infosupport.net:10022/kenniscentrum/REACTJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.rhea.infosupport.net/kenniscentrum/REACTJS/issues"
+  },
+  "homepage": "https://gitlab.rhea.infosupport.net/kenniscentrum/REACTJS",
+  "dependencies": {
+    "express": "^4.16.4",
+    "immutability-helper": "^2.7.1",
+    "lite-server": "^2.2.0"
+  }
+}

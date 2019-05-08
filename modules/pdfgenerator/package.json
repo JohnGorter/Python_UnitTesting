@@ -1,0 +1,17 @@
+{
+  "name": "pdfgenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "./bin/pdfgenerator",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "markdown-pdf": ">=9.0.0",
+    "through": "^2.3.8",
+    "walk": "^2.3.9"
+  }
+}

@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="reveal/css/reveal.css">
+      
+        <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+        <link rel="stylesheet" href="https://webpack.github.io/docs/css/doc.css">
+        <link rel="stylesheet" href="iconica/iconica.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <style>
+        .reveal table td { font-size: 22px;}
+        </style>
+
+    </head>
+    <body>
+            <div id="logo">
+                <img src="./images/logo-iconica.svg" width=200>
+                <img src="./images/logo-edivision.png" width=150>
+            </div>
+            <div id="footer">
+                   <table>
+                       <tr><td><i class="fab fa-twitter"></i></td><td class="last">@JohnGorter</td>
+                       <td><i class="far fa-envelope"></i></td><td class="last">john@iconica.nl</td>
+                       <td><i class="fas fa-globe"></i></td><td class="last">https://www.iconica.nl</td></tr>
+                   </table>
+                </div>
+        <div class="reveal">
+            <div class="slides">
+                   <section data-markdown="./0 Introduction/intro.md" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./0 Introduction/context.md" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./0 Introduction/setup.md" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./3 doctest/00-intro.md" data-separator="~" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./3 doctest/01-moredoctest.md" data-separator="~" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./4 unittest/00-intro.md" data-separator="~" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./4 unittest/01-moreunittest.md" data-separator="~" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./4 unittest/02-doctestunittest.md" data-separator="~" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./4 unittest/03-mocking.md" data-separator="~" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./4 unittest/04-mockingexample.md" data-separator="~" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./4 unittest/05-mocking.md" data-separator="~" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./5 nose2/00-intro.md" data-separator="~" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./6 pytest/00-intro.md" data-separator="~" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./6 pytest/01-plugins.md" data-separator="~" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+                   <section data-markdown="./6 pytest/02-mocking.md" data-separator="~" data-separator-vertical="^---$" data-separator-notes="Note:"></section>
+           </div>
+           
+         </div>
+        <script src="reveal/js/reveal.js"></script>
+        <script src="reveal/lib/js/head.min.js"></script>
+        <script>
+           Reveal.initialize({
+                dependencies: [
+                    // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+                    { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    // Interpret Markdown in <section> elements
+                    { src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    // Syntax highlight for <code> elements
+                    { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    // Zoom in and out with Alt+click
+                    { src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+                    // Speaker notes
+                    { src: 'reveal/plugin/notes/notes.js', async: true },
+                    // MathJax
+                    { src: 'reveal/plugin/math/math.js', async: true }
+                ],
+                history: true
+            });
+        </script>
+    </body>
+</html>

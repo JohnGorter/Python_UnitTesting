@@ -1,0 +1,21 @@
+{
+  "name": "foreacher",
+  "version": "1.0.0",
+  "description": "foreaches anything to process function",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "foreach"
+  ],
+  "bin": {
+    "foreacher": "./bin/foreacher"
+  },
+  "author": "John Gorter",
+  "license": "ISC",
+  "dependencies": {
+    "recursive-readdir": "^2.0.0",
+    "walk": "^2.3.9"
+  }
+}
